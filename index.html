@@ -1,0 +1,2745 @@
+<!DOCTYPE html>
+
+<html lang="ne">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+   content="width=device-width, initial-scale=1.0">
+
+<title>नेपालका चाडपर्व | Nepali Festivals</title>
+
+<style>
+
+/* =========================
+   BASIC RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Noto Sans Devanagari","Segoe UI",Arial,sans-serif;
+    background:#08020d;
+    color:white;
+    overflow-x:hidden;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 7%;
+
+    background:rgba(10,0,15,.72);
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(255,255,255,.12);
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#ffd166;
+}
+
+.logo span{
+    color:#fff;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#ffd166;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+#home{
+    min-height:100vh;
+
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:120px 20px 80px;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #4a0b28 0%,
+            #170516 45%,
+            #08020d 100%
+        );
+}
+
+.hero-content{
+    position:relative;
+    z-index:5;
+    max-width:900px;
+}
+
+.badge{
+    display:inline-block;
+
+    padding:8px 20px;
+
+    border:1px solid #ffd166;
+    border-radius:50px;
+
+    color:#ffd166;
+
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:clamp(48px,8vw,100px);
+
+    line-height:1.05;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffd166,
+            #ff7b00,
+            #ff3d81,
+            #ffd166
+        );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+    color:transparent;
+
+    animation:gradient 6s linear infinite;
+}
+
+@keyframes gradient{
+
+    0%{
+        background-position:0%;
+    }
+
+    100%{
+        background-position:300%;
+    }
+}
+
+.hero p{
+    max-width:700px;
+
+    margin:25px auto;
+
+    color:#ddd;
+
+    font-size:18px;
+
+    line-height:1.8;
+}
+
+.hero-btn{
+    display:inline-block;
+
+    margin-top:15px;
+
+    padding:14px 32px;
+
+    border-radius:50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffb703,
+            #fb5607
+        );
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    box-shadow:
+        0 10px 40px rgba(255,100,0,.35);
+
+    transition:.4s;
+}
+
+.hero-btn:hover{
+    transform:
+        translateY(-5px)
+        scale(1.05);
+}
+
+
+/* =========================
+   3D MANDALA
+========================= */
+
+.mandala{
+    position:absolute;
+
+    width:480px;
+    height:480px;
+
+    right:-150px;
+    top:20%;
+
+    border:
+        2px solid
+        rgba(255,193,7,.25);
+
+    border-radius:50%;
+
+    transform-style:preserve-3d;
+
+    animation:
+        rotateMandala
+        20s
+        linear
+        infinite;
+}
+
+.mandala::before{
+    content:"";
+
+    position:absolute;
+
+    inset:35px;
+
+    border:
+        2px dashed
+        rgba(255,80,120,.3);
+
+    border-radius:50%;
+}
+
+.mandala::after{
+    content:"";
+
+    position:absolute;
+
+    inset:90px;
+
+    border:
+        2px dotted
+        rgba(255,193,7,.35);
+
+    border-radius:50%;
+}
+
+@keyframes rotateMandala{
+
+    from{
+        transform:
+            rotateX(60deg)
+            rotateZ(0deg);
+    }
+
+    to{
+        transform:
+            rotateX(60deg)
+            rotateZ(360deg);
+    }
+}
+
+
+/* =========================
+   GENERAL SECTION
+========================= */
+
+.section{
+    padding:110px 7%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:45px;
+    color:#ffd166;
+    margin-bottom:12px;
+}
+
+.section-title p{
+    color:#aaa;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+#main{
+    background:
+        linear-gradient(
+            180deg,
+            #08020d,
+            #12051a
+        );
+}
+
+.intro{
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    color:#ddd;
+
+    line-height:2;
+
+    font-size:17px;
+}
+
+
+/* =========================
+   FESTIVAL CARDS
+========================= */
+
+.festival-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(270px,1fr)
+        );
+
+    gap:35px;
+
+    perspective:1200px;
+}
+
+.card{
+
+    height:400px;
+
+    position:relative;
+
+    transform-style:preserve-3d;
+
+    transition:
+        transform .7s;
+
+    cursor:pointer;
+}
+
+.card:hover{
+
+    transform:
+        rotateY(12deg)
+        rotateX(8deg)
+        translateY(-12px);
+}
+
+.card-inner{
+
+    position:absolute;
+
+    inset:0;
+
+    padding:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.14),
+            rgba(255,255,255,.03)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.15);
+
+    box-shadow:
+        0 25px 50px
+        rgba(0,0,0,.5);
+
+    backdrop-filter:blur(12px);
+}
+
+.icon{
+
+    position:absolute;
+
+    top:35px;
+    left:50%;
+
+    transform:
+        translateX(-50%)
+        translateZ(60px);
+
+    width:145px;
+    height:145px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    font-size:80px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #fff5b5,
+            #ffb703 35%,
+            #fb5607 65%,
+            transparent 70%
+        );
+
+    box-shadow:
+        0 0 40px #ffb703,
+        0 0 80px
+        rgba(255,100,0,.3);
+
+    animation:
+        floating
+        4s
+        ease-in-out
+        infinite;
+}
+
+@keyframes floating{
+
+    0%,100%{
+        transform:
+            translateX(-50%)
+            translateY(0)
+            translateZ(60px);
+    }
+
+    50%{
+        transform:
+            translateX(-50%)
+            translateY(-12px)
+            translateZ(70px);
+    }
+}
+
+.card h3{
+
+    color:#ffd166;
+
+    font-size:30px;
+
+    margin-bottom:10px;
+
+    transform:translateZ(35px);
+}
+
+.card .date{
+
+    color:#ffb703;
+
+    font-size:14px;
+
+    margin-bottom:10px;
+
+    transform:translateZ(30px);
+}
+
+.card p{
+
+    color:#ddd;
+
+    line-height:1.7;
+
+    transform:translateZ(25px);
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+#about{
+    background:#0c0312;
+}
+
+.about-box{
+
+    max-width:950px;
+
+    margin:auto;
+
+    padding:45px;
+
+    border-radius:25px;
+
+    background:
+        rgba(255,255,255,.05);
+
+    border:
+        1px solid
+        rgba(255,255,255,.1);
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,.4);
+
+    text-align:center;
+}
+
+.about-box h3{
+
+    font-size:32px;
+
+    color:#ffd166;
+
+    margin-bottom:20px;
+}
+
+.about-box p{
+
+    color:#ddd;
+
+    line-height:2;
+
+    font-size:17px;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+#menu{
+
+    background:
+        radial-gradient(
+            circle at top,
+            #250822,
+            #08020d
+        );
+}
+
+.menu-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px,1fr)
+        );
+
+    gap:25px;
+}
+
+.menu-item{
+
+    padding:30px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    background:
+        rgba(255,255,255,.06);
+
+    border:
+        1px solid
+        rgba(255,255,255,.1);
+
+    transition:.4s;
+}
+
+.menu-item:hover{
+
+    transform:
+        translateY(-10px)
+        scale(1.03);
+
+    background:
+        rgba(255,255,255,.1);
+}
+
+.menu-item .emoji{
+
+    font-size:55px;
+
+    margin-bottom:15px;
+}
+
+.menu-item h3{
+
+    color:#ffd166;
+
+    margin-bottom:8px;
+}
+
+.menu-item p{
+
+    color:#bbb;
+
+    line-height:1.6;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(280px,1fr)
+        );
+
+    gap:30px;
+}
+
+.content-box{
+
+    padding:30px;
+
+    border-left:
+        4px solid
+        #ffb703;
+
+    background:
+        rgba(255,255,255,.04);
+
+    border-radius:
+        0 20px 20px 0;
+}
+
+.content-box h3{
+
+    color:#ffd166;
+
+    font-size:25px;
+
+    margin-bottom:15px;
+}
+
+.content-box p{
+
+    color:#ccc;
+
+    line-height:1.8;
+}
+
+
+/* =========================
+   3D DIYA
+========================= */
+
+#diya{
+
+    text-align:center;
+
+    padding:100px 20px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,130,0,.12),
+            transparent 60%
+        );
+}
+
+.diya-scene{
+
+    width:280px;
+    height:280px;
+
+    margin:60px auto;
+
+    position:relative;
+
+    transform-style:preserve-3d;
+
+    animation:
+        diyaFloat
+        4s
+        ease-in-out
+        infinite;
+}
+
+@keyframes diyaFloat{
+
+    0%,100%{
+        transform:
+            translateY(0)
+            rotateX(10deg);
+    }
+
+    50%{
+        transform:
+            translateY(-15px)
+            rotateX(-10deg);
+    }
+}
+
+.diya{
+
+    position:absolute;
+
+    left:40px;
+    bottom:20px;
+
+    width:200px;
+    height:80px;
+
+    background:
+        linear-gradient(
+            #ffbd22,
+            #c84c00
+        );
+
+    border-radius:
+        10px
+        10px
+        100px
+        100px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(255,100,0,.5);
+
+    transform:
+        rotateX(50deg);
+}
+
+.flame{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:105px;
+
+    width:60px;
+    height:95px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        radial-gradient(
+            ellipse at center bottom,
+            white,
+            #ffd166 30%,
+            #ff7b00 60%,
+            transparent 72%
+        );
+
+    filter:
+        drop-shadow(
+            0 0 25px
+            #ff7b00
+        );
+
+    animation:
+        flame 1s
+        ease-in-out
+        infinite alternate;
+}
+
+@keyframes flame{
+
+    from{
+        transform:
+            translateX(-50%)
+            scale(.9)
+            rotate(-5deg);
+    }
+
+    to{
+        transform:
+            translateX(-50%)
+            scale(1.1)
+            rotate(5deg);
+    }
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+#form{
+
+    background:
+        linear-gradient(
+            180deg,
+            #08020d,
+            #17051c
+        );
+}
+
+.form-container{
+
+    max-width:700px;
+
+    margin:auto;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    background:
+        rgba(255,255,255,.05);
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,.5);
+}
+
+.form-group{
+
+    margin-bottom:20px;
+}
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:#ffd166;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    width:100%;
+
+    padding:14px 16px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    color:white;
+
+    border:
+        1px solid
+        rgba(255,255,255,.1);
+
+    font-size:15px;
+}
+
+.form-group select option{
+
+    background:#18071c;
+
+    color:white;
+}
+
+.form-group textarea{
+
+    min-height:130px;
+
+    resize:vertical;
+}
+
+.submit-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffb703,
+            #fb5607
+        );
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.submit-btn:hover{
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(255,100,0,.35);
+}
+
+.submit-btn:disabled{
+
+    opacity:.7;
+
+    cursor:not-allowed;
+
+    transform:none;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    padding:50px 20px;
+
+    text-align:center;
+
+    background:#050107;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.1);
+
+    color:#999;
+}
+
+footer strong{
+
+    color:#ffd166;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:750px){
+
+    nav{
+
+        padding:
+            15px 20px;
+    }
+
+    nav ul{
+
+        display:none;
+    }
+
+    .logo{
+
+        font-size:19px;
+    }
+
+    .section{
+
+        padding:
+            80px 20px;
+    }
+
+    .section-title h2{
+
+        font-size:34px;
+    }
+
+    .mandala{
+
+        width:280px;
+        height:280px;
+
+        right:-150px;
+    }
+
+    .form-container{
+
+        padding:25px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+```
+<div class="logo">
+    🇳🇵 नेपालका <span>चाडपर्व</span>
+</div>
+
+<ul>
+
+    <li>
+        <a href="#home">होम</a>
+    </li>
+
+    <li>
+        <a href="#main">मुख्य पृष्ठ</a>
+    </li>
+
+    <li>
+        <a href="#about">हाम्रो बारेमा</a>
+    </li>
+
+    <li>
+        <a href="#menu">मेनु</a>
+    </li>
+
+    <li>
+        <a href="#content">सामग्री</a>
+    </li>
+
+    <li>
+        <a href="#form">फर्म</a>
+    </li>
+
+</ul>
+```
+
+</nav>
+
+<!-- =========================
+     HOME
+========================= -->
+
+<section id="home">
+
+```
+<div class="mandala"></div>
+
+<div class="hero-content">
+
+    <div class="badge">
+        🇳🇵 नेपालको संस्कृति र परम्परा
+    </div>
+
+    <h1>
+        नेपाली चाडपर्व
+    </h1>
+
+    <p>
+        नेपालको विविध संस्कृति, परम्परा,
+        धार्मिक विश्वास र सामाजिक एकताको
+        सुन्दर संसारमा स्वागत छ।
+    </p>
+
+    <a
+        href="#main"
+        class="hero-btn"
+    >
+        ✨ सुरु गर्नुहोस्
+    </a>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<section
+    class="section"
+    id="main"
+>
+
+```
+<div class="section-title">
+
+    <h2>
+        🇳🇵 नेपालको चाडपर्वको मुख्य परिचय
+    </h2>
+
+    <p>
+        हाम्रो संस्कृति र परम्पराको झलक
+    </p>
+
+</div>
+
+
+<div class="intro">
+
+    नेपाल विविध जातजाति, भाषा, धर्म,
+    संस्कृति र परम्पराले भरिपूर्ण देश हो।
+    यहाँ वर्षभरि विभिन्न चाडपर्वहरू
+    मनाइन्छन्।
+
+    <br><br>
+
+    यी चाडपर्वहरूले नेपाली समाजमा
+    प्रेम, सद्भाव, एकता र सांस्कृतिक
+    पहिचानलाई बलियो बनाउँछन्।
+
+</div>
+
+
+<br><br><br>
+
+
+<div class="festival-grid">
+
+
+    <!-- DASHAIN -->
+
+    <div class="card">
+
+        <div class="card-inner">
+
+            <div class="icon">
+                🪁
+            </div>
+
+            <h3>
+                दशैं
+            </h3>
+
+            <div class="date">
+                📅 आश्विन शुक्ल प्रतिपदादेखि
+                पूर्णिमासम्म
+            </div>
+
+            <p>
+                दशैं नेपालको प्रमुख तथा
+                सबैभन्दा ठूलो चाड हो।
+                यस समयमा परिवार तथा
+                आफन्तबीच भेटघाट गर्ने,
+                टीका–जमरा लगाउने र
+                ठूलाबडाबाट आशीर्वाद
+                लिने परम्परा रहेको छ।
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- TIHAR -->
+
+    <div class="card">
+
+        <div class="card-inner">
+
+            <div class="icon">
+                🪔
+            </div>
+
+            <h3>
+                तिहार
+            </h3>
+
+            <div class="date">
+                📅 कार्तिक कृष्ण त्रयोदशीदेखि
+                कार्तिक शुक्ल द्वितीयासम्म
+            </div>
+
+            <p>
+                तिहारलाई दीपावली वा
+                उज्यालोको पर्व पनि भनिन्छ।
+                काग तिहार, कुकुर तिहार,
+                लक्ष्मी पूजा, गोवर्धन पूजा
+                तथा भाइटीका यस पर्वका
+                प्रमुख दिनहरू हुन्।
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- CHHATH -->
+
+    <div class="card">
+
+        <div class="card-inner">
+
+            <div class="icon">
+                ☀️
+            </div>
+
+            <h3>
+                छठ पर्व
+            </h3>
+
+            <div class="date">
+                📅 कार्तिक शुक्ल चतुर्थीदेखि
+                सप्तमीसम्म
+            </div>
+
+            <p>
+                छठ पर्व सूर्य देवताको
+                आराधना गरिने महत्वपूर्ण
+                पर्व हो। विशेषगरी
+                तराई–मधेश क्षेत्रमा यसलाई
+                श्रद्धा र भक्तिपूर्वक
+                मनाइन्छ।
+            </p>
+
+        </div>
+
+    </div>
+
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section
+    class="section"
+    id="about"
+>
+
+```
+<div class="section-title">
+
+    <h2>
+        👥 हाम्रो बारेमा
+    </h2>
+
+    <p>
+        About Us
+    </p>
+
+</div>
+
+
+<div class="about-box">
+
+    <h3>
+        🇳🇵 नेपाली चाडपर्व
+    </h3>
+
+    <p>
+
+        यो वेबसाइट नेपालको संस्कृति,
+        परम्परा र प्रमुख चाडपर्वहरूको
+        बारेमा जानकारी प्रदान गर्ने
+        उद्देश्यले तयार गरिएको हो।
+
+        <br><br>
+
+        हाम्रो उद्देश्य नेपाली चाडपर्व,
+        परम्परा र सांस्कृतिक पहिचानलाई
+        डिजिटल माध्यमबाट नयाँ पुस्तासम्म
+        पुर्‍याउनु हो।
+
+        <br><br>
+
+        नेपालका विविध संस्कृति र
+        परम्परालाई सम्मान गर्दै
+        “विविधतामा एकता” को भावना
+        प्रस्तुत गर्नु हाम्रो मुख्य उद्देश्य हो।
+
+    </p>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     MENU
+========================= -->
+
+<section
+    class="section"
+    id="menu"
+>
+
+```
+<div class="section-title">
+
+    <h2>
+        📋 चाडपर्व मेनु
+    </h2>
+
+    <p>
+        प्रमुख पर्वहरूको सूची
+    </p>
+
+</div>
+
+
+<div class="menu-grid">
+
+
+    <div class="menu-item">
+
+        <div class="emoji">
+            🪁
+        </div>
+
+        <h3>
+            दशैं
+        </h3>
+
+        <p>
+            टीका, जमरा र पारिवारिक
+            भेटघाटको पर्व।
+        </p>
+
+    </div>
+
+
+    <div class="menu-item">
+
+        <div class="emoji">
+            🪔
+        </div>
+
+        <h3>
+            तिहार
+        </h3>
+
+        <p>
+            दीप, लक्ष्मी पूजा,
+            देउसी–भैलो र भाइटीका।
+        </p>
+
+    </div>
+
+
+    <div class="menu-item">
+
+        <div class="emoji">
+            ☀️
+        </div>
+
+        <h3>
+            छठ पर्व
+        </h3>
+
+        <p>
+            सूर्य देवताको आराधना
+            गरिने पर्व।
+        </p>
+
+    </div>
+
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     CONTENT
+========================= -->
+
+<section
+    class="section"
+    id="content"
+>
+
+```
+<div class="section-title">
+
+    <h2>
+        📖 चाडपर्व सम्बन्धी सामग्री
+    </h2>
+
+    <p>
+        संस्कृति र परम्पराको महत्व
+    </p>
+
+</div>
+
+
+<div class="content-grid">
+
+
+    <div class="content-box">
+
+        <h3>
+            🪁 दशैंको महत्व
+        </h3>
+
+        <p>
+            दशैंले परिवार, आफन्त र
+            समाजबीचको सम्बन्धलाई
+            अझ नजिक बनाउने अवसर
+            प्रदान गर्छ। टीका र
+            जमरा लगाउने परम्पराले
+            आशीर्वाद र शुभकामनाको
+            भावना व्यक्त गर्छ।
+        </p>
+
+    </div>
+
+
+    <div class="content-box">
+
+        <h3>
+            🪔 तिहारको महत्व
+        </h3>
+
+        <p>
+            तिहार उज्यालो, प्रेम,
+            सम्मान र पारिवारिक
+            सम्बन्धको पर्व हो।
+            विभिन्न दिनमा जनावर तथा
+            देवी लक्ष्मीको पूजा गर्ने
+            परम्परा रहेको छ।
+        </p>
+
+    </div>
+
+
+    <div class="content-box">
+
+        <h3>
+            ☀️ छठ पर्वको महत्व
+        </h3>
+
+        <p>
+            छठ पर्वमा सूर्य देवता र
+            प्रकृतिप्रति श्रद्धा
+            व्यक्त गरिन्छ। जलाशयमा
+            पूजा तथा सूर्यलाई अर्घ्य
+            दिने परम्परा यसको
+            मुख्य विशेषता हो।
+        </p>
+
+    </div>
+
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     3D DIYA
+========================= -->
+
+<section id="diya">
+
+```
+<div class="section-title">
+
+    <h2>
+        🪔 3D दीप
+    </h2>
+
+    <p>
+        तिहारको उज्यालोको प्रतीक
+    </p>
+
+</div>
+
+
+<div class="diya-scene">
+
+    <div class="flame"></div>
+
+    <div class="diya"></div>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     GOOGLE SHEET FORM
+========================= -->
+
+<section
+    class="section"
+    id="form"
+>
+
+```
+<div class="section-title">
+
+    <h2>
+        📝 सम्पर्क फर्म
+    </h2>
+
+    <p>
+        आफ्नो विचार वा जानकारी पठाउनुहोस्
+    </p>
+
+</div>
+
+
+<div class="form-container">
+
+    <form id="festivalForm">
+
+
+        <!-- NAME -->
+
+        <div class="form-group">
+
+            <label for="name">
+                पूरा नाम
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="आफ्नो नाम लेख्नुहोस्"
+                required
+            >
+
+        </div>
+
+
+        <!-- EMAIL -->
+
+        <div class="form-group">
+
+            <label for="email">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="example@gmail.com"
+                required
+            >
+
+        </div>
+
+
+        <!-- FESTIVAL -->
+
+        <div class="form-group">
+
+            <label for="festival">
+                मनपर्ने चाडपर्व
+            </label>
+
+            <select
+                id="festival"
+                required
+            >
+
+                <option value="">
+                    चाडपर्व छान्नुहोस्
+                </option>
+
+                <option value="दशैं">
+                    दशैं
+                </option>
+
+                <option value="तिहार">
+                    तिहार
+                </option>
+
+                <option value="छठ पर्व">
+                    छठ पर्व
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- MESSAGE -->
+
+        <div class="form-group">
+
+            <label for="message">
+                तपाईंको सन्देश
+            </label>
+
+            <textarea
+                id="message"
+                placeholder="आफ्नो सन्देश लेख्नुहोस्..."
+                required
+            ></textarea>
+
+        </div>
+
+
+        <!-- SUBMIT -->
+
+        <button
+            class="submit-btn"
+            type="submit"
+            id="submitBtn"
+        >
+            ✨ Submit
+        </button>
+
+
+        <!-- STATUS -->
+
+        <div
+            id="formStatus"
+            style="
+                text-align:center;
+                margin-top:18px;
+                font-weight:bold;
+            "
+        ></div>
+
+
+    </form>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+```
+<p>
+
+    🇳🇵
+
+    <strong>
+        नेपाली चाडपर्व
+    </strong>
+
+</p>
+
+
+<p style="margin-top:10px;">
+
+    नेपालको संस्कृति,
+    परम्परा र पहिचानलाई समर्पित।
+
+</p>
+
+
+<p style="margin-top:20px;">
+
+    © 2026 | Nepali Festivals 3D
+
+</p>
+```
+
+</footer>
+
+<!-- =========================
+     GOOGLE SHEETS JAVASCRIPT
+========================= -->
+
+<script>
+
+/*
+==================================================
+GOOGLE APPS SCRIPT WEB APP URL
+==================================================
+*/
+
+const GOOGLE_SCRIPT_URL =
+"https://script.google.com/macros/s/AKfycbzqArWxrkz1aPFx_Lyi0_D14L6g-F_xBA-00PE1e9eLApHVS9qLcWg_mA6fzxakPsx2/exec";
+
+
+/*
+==================================================
+FORM
+==================================================
+*/
+
+const festivalForm =
+document.getElementById("festivalForm");
+
+
+festivalForm.addEventListener(
+    "submit",
+    async function(event){
+
+        event.preventDefault();
+
+
+        /*
+        ------------------------------------------
+        GET ELEMENTS
+        ------------------------------------------
+        */
+
+        const button =
+        document.getElementById("submitBtn");
+
+        const status =
+        document.getElementById("formStatus");
+
+
+        /*
+        ------------------------------------------
+        GET VALUES
+        ------------------------------------------
+        */
+
+        const name =
+        document.getElementById("name")
+        .value
+        .trim();
+
+        const email =
+        document.getElementById("email")
+        .value
+        .trim();
+
+        const festival =
+        document.getElementById("festival")
+        .value;
+
+        const message =
+        document.getElementById("message")
+        .value
+        .trim();
+
+
+        /*
+        ------------------------------------------
+        CHECK EMPTY DATA
+        ------------------------------------------
+        */
+
+        if(
+            !name ||
+            !email ||
+            !festival ||
+            !message
+        ){
+
+            status.innerHTML =
+            "⚠️ कृपया सबै जानकारी भर्नुहोस्।";
+
+            status.style.color =
+            "#ff6b6b";
+
+            return;
+
+        }
+
+
+        /*
+        ------------------------------------------
+        BUTTON LOADING
+        ------------------------------------------
+        */
+
+        button.disabled = true;
+
+        button.innerHTML =
+        "⏳ पठाउँदै...";
+
+        status.innerHTML = "";
+
+
+        /*
+        ------------------------------------------
+        CREATE JSON DATA
+        ------------------------------------------
+        */
+
+        const data = {
+
+            name: name,
+
+            email: email,
+
+            festival: festival,
+
+            message: message
+
+        };
+
+
+        /*
+        ------------------------------------------
+        SEND TO GOOGLE APPS SCRIPT
+        ------------------------------------------
+        */
+
+        try{
+
+            await fetch(
+                GOOGLE_SCRIPT_URL,
+                {
+                    method:"POST",
+
+                    mode:"no-cors",
+
+                    headers:{
+                        "Content-Type":
+                        "text/plain;charset=utf-8"
+                    },
+
+                    body:JSON.stringify(data)
+                }
+            );
+
+
+            /*
+            --------------------------------------
+            SUCCESS MESSAGE
+            --------------------------------------
+            */
+
+            status.innerHTML =
+            "✅ धन्यवाद! तपाईंको जानकारी सफलतापूर्वक पठाइयो।";
+
+            status.style.color =
+            "#4ade80";
+
+
+            /*
+            --------------------------------------
+            CLEAR FORM
+            --------------------------------------
+            */
+
+            festivalForm.reset();
+
+
+        }catch(error){
+
+            console.error(error);
+
+
+            status.innerHTML =
+            "❌ जानकारी पठाउन समस्या भयो।";
+
+            status.style.color =
+            "#ff6b6b";
+
+        }
+
+
+        /*
+        ------------------------------------------
+        RESTORE BUTTON
+        ------------------------------------------
+        */
+
+        button.disabled = false;
+
+        button.innerHTML =
+        "✨ Submit";
+
+    }
+);
+
+</script>
+
+</body>
+
+</html>
+     <a
+            href="#main"
+            class="hero-btn"
+        >
+            ✨ सुरु गर्नुहोस्
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<section
+    class="section"
+    id="main"
+>
+
+    <div class="section-title">
+
+        <h2>
+            🇳🇵 नेपालको चाडपर्वको मुख्य परिचय
+        </h2>
+
+        <p>
+            हाम्रो संस्कृति र परम्पराको झलक
+        </p>
+
+    </div>
+
+
+    <div class="intro">
+
+        नेपाल विविध जातजाति, भाषा, धर्म,
+        संस्कृति र परम्पराले भरिपूर्ण देश हो।
+        यहाँ वर्षभरि विभिन्न चाडपर्वहरू
+        मनाइन्छन्।
+
+        <br><br>
+
+        यी चाडपर्वहरूले नेपाली समाजमा
+        प्रेम, सद्भाव, एकता र सांस्कृतिक
+        पहिचानलाई बलियो बनाउँछन्।
+
+    </div>
+
+
+    <br><br><br>
+
+
+    <div class="festival-grid">
+
+
+        <!-- DASHAIN -->
+
+        <div class="card">
+
+            <div class="card-inner">
+
+                <div class="icon">
+                    🪁
+                </div>
+
+                <h3>
+                    दशैं
+                </h3>
+
+                <div class="date">
+                    📅 आश्विन शुक्ल प्रतिपदादेखि
+                    पूर्णिमासम्म
+                </div>
+
+                <p>
+                    दशैं नेपालको प्रमुख तथा
+                    सबैभन्दा ठूलो चाड हो।
+                    यस समयमा परिवार तथा
+                    आफन्तबीच भेटघाट गर्ने,
+                    टीका–जमरा लगाउने र
+                    ठूलाबडाबाट आशीर्वाद
+                    लिने परम्परा रहेको छ।
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- TIHAR -->
+
+        <div class="card">
+
+            <div class="card-inner">
+
+                <div class="icon">
+                    🪔
+                </div>
+
+                <h3>
+                    तिहार
+                </h3>
+
+                <div class="date">
+                    📅 कार्तिक कृष्ण त्रयोदशीदेखि
+                    कार्तिक शुक्ल द्वितीयासम्म
+                </div>
+
+                <p>
+                    तिहारलाई दीपावली वा
+                    उज्यालोको पर्व पनि भनिन्छ।
+                    काग तिहार, कुकुर तिहार,
+                    लक्ष्मी पूजा, गोवर्धन पूजा
+                    तथा भाइटीका यस पर्वका
+                    प्रमुख दिनहरू हुन्।
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- CHHATH -->
+
+        <div class="card">
+
+            <div class="card-inner">
+
+                <div class="icon">
+                    ☀️
+                </div>
+
+                <h3>
+                    छठ पर्व
+                </h3>
+
+                <div class="date">
+                    📅 कार्तिक शुक्ल चतुर्थीदेखि
+                    सप्तमीसम्म
+                </div>
+
+                <p>
+                    छठ पर्व सूर्य देवताको
+                    आराधना गरिने महत्वपूर्ण
+                    पर्व हो। विशेषगरी
+                    तराई–मधेश क्षेत्रमा यसलाई
+                    श्रद्धा र भक्तिपूर्वक
+                    मनाइन्छ।
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section
+    class="section"
+    id="about"
+>
+
+    <div class="section-title">
+
+        <h2>
+            👥 हाम्रो बारेमा
+        </h2>
+
+        <p>
+            About Us
+        </p>
+
+    </div>
+
+
+    <div class="about-box">
+
+        <h3>
+            🇳🇵 नेपाली चाडपर्व
+        </h3>
+
+        <p>
+
+            यो वेबसाइट नेपालको संस्कृति,
+            परम्परा र प्रमुख चाडपर्वहरूको
+            बारेमा जानकारी प्रदान गर्ने
+            उद्देश्यले तयार गरिएको हो।
+
+            <br><br>
+
+            हाम्रो उद्देश्य नेपाली चाडपर्व,
+            परम्परा र सांस्कृतिक पहिचानलाई
+            डिजिटल माध्यमबाट नयाँ पुस्तासम्म
+            पुर्‍याउनु हो।
+
+            <br><br>
+
+            नेपालका विविध संस्कृति र
+            परम्परालाई सम्मान गर्दै
+            “विविधतामा एकता” को भावना
+            प्रस्तुत गर्नु हाम्रो मुख्य उद्देश्य हो।
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MENU
+========================= -->
+
+<section
+    class="section"
+    id="menu"
+>
+
+    <div class="section-title">
+
+        <h2>
+            📋 चाडपर्व मेनु
+        </h2>
+
+        <p>
+            प्रमुख पर्वहरूको सूची
+        </p>
+
+    </div>
+
+
+    <div class="menu-grid">
+
+
+        <div class="menu-item">
+
+            <div class="emoji">
+                🪁
+            </div>
+
+            <h3>
+                दशैं
+            </h3>
+
+            <p>
+                टीका, जमरा र पारिवारिक
+                भेटघाटको पर्व।
+            </p>
+
+        </div>
+
+
+        <div class="menu-item">
+
+            <div class="emoji">
+                🪔
+            </div>
+
+            <h3>
+                तिहार
+            </h3>
+
+            <p>
+                दीप, लक्ष्मी पूजा,
+                देउसी–भैलो र भाइटीका।
+            </p>
+
+        </div>
+
+
+        <div class="menu-item">
+
+            <div class="emoji">
+                ☀️
+            </div>
+
+            <h3>
+                छठ पर्व
+            </h3>
+
+            <p>
+                सूर्य देवताको आराधना
+                गरिने पर्व।
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTENT
+========================= -->
+
+<section
+    class="section"
+    id="content"
+>
+
+    <div class="section-title">
+
+        <h2>
+            📖 चाडपर्व सम्बन्धी सामग्री
+        </h2>
+
+        <p>
+            संस्कृति र परम्पराको महत्व
+        </p>
+
+    </div>
+
+
+    <div class="content-grid">
+
+
+        <div class="content-box">
+
+            <h3>
+                🪁 दशैंको महत्व
+            </h3>
+
+            <p>
+                दशैंले परिवार, आफन्त र
+                समाजबीचको सम्बन्धलाई
+                अझ नजिक बनाउने अवसर
+                प्रदान गर्छ। टीका र
+                जमरा लगाउने परम्पराले
+                आशीर्वाद र शुभकामनाको
+                भावना व्यक्त गर्छ।
+            </p>
+
+        </div>
+
+
+        <div class="content-box">
+
+            <h3>
+                🪔 तिहारको महत्व
+            </h3>
+
+            <p>
+                तिहार उज्यालो, प्रेम,
+                सम्मान र पारिवारिक
+                सम्बन्धको पर्व हो।
+                विभिन्न दिनमा जनावर तथा
+                देवी लक्ष्मीको पूजा गर्ने
+                परम्परा रहेको छ।
+            </p>
+
+        </div>
+
+
+        <div class="content-box">
+
+            <h3>
+                ☀️ छठ पर्वको महत्व
+            </h3>
+
+            <p>
+                छठ पर्वमा सूर्य देवता र
+                प्रकृतिप्रति श्रद्धा
+                व्यक्त गरिन्छ। जलाशयमा
+                पूजा तथा सूर्यलाई अर्घ्य
+                दिने परम्परा यसको
+                मुख्य विशेषता हो।
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     3D DIYA
+========================= -->
+
+<section id="diya">
+
+    <div class="section-title">
+
+        <h2>
+            🪔 3D दीप
+        </h2>
+
+        <p>
+            तिहारको उज्यालोको प्रतीक
+        </p>
+
+    </div>
+
+
+    <div class="diya-scene">
+
+        <div class="flame"></div>
+
+        <div class="diya"></div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GOOGLE SHEET FORM
+========================= -->
+
+<section
+    class="section"
+    id="form"
+>
+
+    <div class="section-title">
+
+        <h2>
+            📝 सम्पर्क फर्म
+        </h2>
+
+        <p>
+            आफ्नो विचार वा जानकारी पठाउनुहोस्
+        </p>
+
+    </div>
+
+
+    <div class="form-container">
+
+        <form id="festivalForm">
+
+
+            <!-- NAME -->
+
+            <div class="form-group">
+
+                <label for="name">
+                    पूरा नाम
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="आफ्नो नाम लेख्नुहोस्"
+                    required
+                >
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="example@gmail.com"
+                    required
+                >
+
+            </div>
+
+
+            <!-- FESTIVAL -->
+
+            <div class="form-group">
+
+                <label for="festival">
+                    मनपर्ने चाडपर्व
+                </label>
+
+                <select
+                    id="festival"
+                    required
+                >
+
+                    <option value="">
+                        चाडपर्व छान्नुहोस्
+                    </option>
+
+                    <option value="दशैं">
+                        दशैं
+                    </option>
+
+                    <option value="तिहार">
+                        तिहार
+                    </option>
+
+                    <option value="छठ पर्व">
+                        छठ पर्व
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- MESSAGE -->
+
+            <div class="form-group">
+
+                <label for="message">
+                    तपाईंको सन्देश
+                </label>
+
+                <textarea
+                    id="message"
+                    placeholder="आफ्नो सन्देश लेख्नुहोस्..."
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <!-- SUBMIT -->
+
+            <button
+                class="submit-btn"
+                type="submit"
+                id="submitBtn"
+            >
+                ✨ Submit
+            </button>
+
+
+            <!-- STATUS -->
+
+            <div
+                id="formStatus"
+                style="
+                    text-align:center;
+                    margin-top:18px;
+                    font-weight:bold;
+                "
+            ></div>
+
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+
+        🇳🇵
+
+        <strong>
+            नेपाली चाडपर्व
+        </strong>
+
+    </p>
+
+
+    <p style="margin-top:10px;">
+
+        नेपालको संस्कृति,
+        परम्परा र पहिचानलाई समर्पित।
+
+    </p>
+
+
+    <p style="margin-top:20px;">
+
+        © 2026 | Nepali Festivals 3D
+
+    </p>
+
+</footer>
+
+
+<!-- =========================
+     GOOGLE SHEETS JAVASCRIPT
+========================= -->
+
+<script>
+
+
+/*
+==================================================
+GOOGLE APPS SCRIPT WEB APP URL
+==================================================
+*/
+
+const GOOGLE_SCRIPT_URL =
+"https://script.google.com/macros/s/AKfycbyfOfiE0Jja3VWuCc1xlmIqSxka23PToccx7CpvUbOSJXtVDyIQ2MwHXFe0n90Se_g/exec";
+
+
+/*
+==================================================
+FORM
+==================================================
+*/
+
+const festivalForm =
+document.getElementById("festivalForm");
+
+
+festivalForm.addEventListener(
+    "submit",
+    function(event){
+
+        event.preventDefault();
+
+
+        /*
+        ------------------------------------------
+        GET ELEMENTS
+        ------------------------------------------
+        */
+
+        const button =
+        document.getElementById("submitBtn");
+
+        const status =
+        document.getElementById("formStatus");
+
+
+        /*
+        ------------------------------------------
+        GET VALUES
+        ------------------------------------------
+        */
+
+        const name =
+        document.getElementById("name")
+        .value
+        .trim();
+
+
+        const email =
+        document.getElementById("email")
+        .value
+        .trim();
+
+
+        const festival =
+        document.getElementById("festival")
+        .value;
+
+
+        const message =
+        document.getElementById("message")
+        .value
+        .trim();
+
+
+        /*
+        ------------------------------------------
+        CHECK EMPTY DATA
+        ------------------------------------------
+        */
+
+        if(
+            !name ||
+            !email ||
+            !festival ||
+            !message
+        ){
+
+            status.innerHTML =
+            "⚠️ कृपया सबै जानकारी भर्नुहोस्।";
+
+            status.style.color =
+            "#ff6b6b";
+
+            return;
+
+        }
+
+
+        /*
+        ------------------------------------------
+        BUTTON LOADING
+        ------------------------------------------
+        */
+
+        button.disabled = true;
+
+        button.innerHTML =
+        "⏳ पठाउँदै...";
+
+
+        status.innerHTML = "";
+
+
+        /*
+        ------------------------------------------
+        CREATE DATA
+        ------------------------------------------
+        */
+
+        const data =
+        new URLSearchParams();
+
+
+        data.append(
+            "name",
+            name
+        );
+
+
+        data.append(
+            "email",
+            email
+        );
+
+
+        data.append(
+            "festival",
+            festival
+        );
+
+
+        data.append(
+            "message",
+            message
+        );
+
+
+        /*
+        ------------------------------------------
+        SEND TO GOOGLE APPS SCRIPT
+        ------------------------------------------
+        */
+
+        fetch(
+            GOOGLE_SCRIPT_URL,
+            {
+                method:"POST",
+
+                body:data,
+
+                mode:"no-cors"
+            }
+        )
+
+
+        /*
+        ------------------------------------------
+        SUCCESS
+        ------------------------------------------
+        */
+
+        .then(
+            function(){
+
+                status.innerHTML =
+                "✅ धन्यवाद! तपाईंको जानकारी सफलतापूर्वक पठाइयो।";
+
+                status.style.color =
+                "#4ade80";
+
+
+                /*
+                CLEAR FORM
+                */
+
+                festivalForm.reset();
+
+
+                /*
+                RESTORE BUTTON
+                */
+
+                button.disabled = false;
+
+                button.innerHTML =
+                "✨ Submit";
+
+            }
+        )
+
+
+        /*
+        ------------------------------------------
+        ERROR
+        ------------------------------------------
+        */
+
+        .catch(
+            function(error){
+
+                console.error(error);
+
+
+                status.innerHTML =
+                "❌ जानकारी पठाउन समस्या भयो।";
+
+
+                status.style.color =
+                "#ff6b6b";
+
+
+                button.disabled = false;
+
+                button.innerHTML =
+                "✨ Submit";
+
+            }
+        );
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>
+
